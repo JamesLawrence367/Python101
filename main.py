@@ -5,14 +5,11 @@ while True:
     try:
         dob = input("Enter your year of birth (dd/mm/yyyy):\n")
         day, month, year  = dob.split("/")
-        day = int(day)
-        month = int(month)
-        year = int(year)
         break
     except:
         print("Enter using correct format")
 
-age = [dt.date.today().day - day, dt.date.today().month - month, dt.date.today().year - year]
+age = [dt.date.today().day - int(day), dt.date.today().month - int(month), dt.date.today().year - int(year)]
 
 if day == 28:
     age[2]=(age[2]/4)
