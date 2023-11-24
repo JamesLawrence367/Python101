@@ -12,10 +12,13 @@ while True:
     except:
         print("Enter using correct format")
 
-age = [str(dt.date.today().day - day), str(dt.date.today().month - month), str(dt.date.today().year - year)]
+age = [dt.date.today().day - day, dt.date.today().month - month, dt.date.today().year - year]
 
+if day == 28:
+    age[2]=(age[2]/4)
 
-print("You Are " + age[2] + " Years Old, " + age[1] + " Months Old And " + age[0] + " Days Old")
+print("You Are " + str(age[2]) + " Years Old, " + str(age[1]) + " Months Old And " + str(age[0]) + " Days Old")
 
 if int(age[1]) < dt.date.today().month:
     print("You have had your birthday this year!")
+
