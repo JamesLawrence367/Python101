@@ -4,9 +4,10 @@ import datetime as dt
 while True:
     try:
         dob = input("Enter your year of birth (dd/mm/yyyy):\n")
-        day = int(dob[:2])
-        month = int(dob[3:5])
-        year = int(dob[6:10])
+        day, month, year  = dob.split("/")
+        day = int(day)
+        month = int(month)
+        year = int(year)
         break
     except:
         print("Enter using correct format")
@@ -15,3 +16,6 @@ age = [str(dt.date.today().day - day), str(dt.date.today().month - month), str(d
 
 
 print("You Are " + age[2] + " Years Old, " + age[1] + " Months Old And " + age[0] + " Days Old")
+
+if int(age[1]) < dt.date.today().month:
+    print("You have had your birthday this year!")
