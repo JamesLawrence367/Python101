@@ -1,7 +1,5 @@
 # James Lawrence | 24/11/2023
-import datetime
-
-print("Hello, World!")
+import datetime as dt
 
 while True:
     try:
@@ -9,5 +7,5 @@ while True:
         break
     except:
         print("Enter A Number")
-    
-print("You Are " + str(datetime.date.today().year - dob) + " Years Old!")
+
+print("You Are " + str(dt.date.today().year - dob) + " Years Old!")
