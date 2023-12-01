@@ -33,6 +33,6 @@ bday = monthCalc(int(month))  + int(day)
 currentDay = monthCalc(today[1]) + today[0]
 
 if today[1] > int(month):
-    print("You Have Had Your Birthday, You Have " + str(bday - currentDay + 365)  + " (or " + str(bday - currentDay + 366) ") Days Until Your Birthday!")
+    print("You Have Had Your Birthday, You Have " + str(bday - currentDay + 365) + " Days Until Your Birthday!")
 else:
     print("You have " + str(bday - currentDay) + " Days Until Your Birthday!")
