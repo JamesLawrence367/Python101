@@ -1,13 +1,12 @@
 import random
 
-def getList(max, reps):
-    rdm = []
-    for i in range(0, reps):
-        rdm.append(random.randint(0,max))
-    return rdm
+# Write a function to create a random list
 
-myList = getList(100, 10)
-print(myList)
+def getList(max, reps): # Function with maximum random value and how many values want to be returned
+    rdm = [] # Create empty list
+    for i in range(0, reps): # Repeats for values up to how many want to be returned
+        rdm.append(random.randint(0,max)) # Adds random value up to the max at the end of the list
+    return rdm # Returns List
 
 # Write a function to sort the list
 
@@ -19,7 +18,10 @@ def sort(L):
                 temp = L[x] # Create temporary value
                 L[x] = L[x+1] # Switch Value A to B
                 L[x+1] = temp # Switch Value B to A
-    return L
+    return L # Returns Sorted List
            
+myList = getList(100, 10)
+print(myList)
+
 myList = sort(myList)
 print(myList)
