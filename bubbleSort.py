@@ -10,7 +10,7 @@ def getList(max, reps): # Function with maximum random value and how many values
 
 # Write a function to sort the list
 
-def sort(L):
+def bubbleSort(L):
     length = len(L)-1 # Convenience, -1 or else x+1 causes issues at end of list
     for i in range(length): # repeat for length of list
         for x in range(length-i): # repeat 10 - rep of loop its nested in
@@ -23,5 +23,5 @@ def sort(L):
 myList = getList(100, 10)
 print(myList)
 
-myList = sort(myList)
+myList = bubbleSort(myList)
 print(myList)
