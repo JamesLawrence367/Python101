@@ -44,7 +44,7 @@ print(*L)
 # Task 7 
 
 print(2)
-for num in range(3, 999999999999, 2): # Excludes all even numbers for efficiency
+for num in range(3, 1000001, 2): # Excludes all even numbers for efficiency
     if all(num % i != 0 for i in range(3, int(num ** 0.5) + 1, 2)): # Checks if the number is prime using the square root method
         print(num)
 
